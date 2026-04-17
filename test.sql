@@ -50,7 +50,7 @@ JOIN products
  ON order_items.product_id = products.id
 JOIN users
  ON orders.user_id = users.id
-GROUP BY users.name
+GROUP BY users.name,users.id
 ORDER BY total_price DESC -- 大きい順
 LIMIT 1;
 
